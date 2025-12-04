@@ -7,7 +7,6 @@ import Panier from "./pages/Panier";
 import ProductPage from "./pages/ProductPage";
 import Cart from './pages/Cart';
 import Products from './components/Header/Products';
-import "./i18n";
 
 
 function App() {

@@ -71,6 +71,11 @@
 .product-button:hover {
   background-color: #c2185b;
 }
+.product-price2{
+  width: 55%;
+  line-height: 1.6;
+  font-size: 15px;
+}
 
 /* ============ Mobile Responsive ============ */
 @media (max-width: 768px) {
@@ -80,6 +85,11 @@
     text-align: center;
   }
 
+  .product-price2{
+        width: 100%;
+    font-size: 14px;
+    line-height: 1.7;
+  }
   .product-image {
     width: 80%;
     max-width: 300px;

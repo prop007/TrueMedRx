@@ -3,16 +3,21 @@ import "./PromoCarousel.css";
 
 const slides = [
   {
-    image: "/images/promo1.jpg",
-    title: "Nature & diététique",
-    discount: "-58%",
-  },
-  {
     image: "/images/promo2.png",
-    title: "Forme & énergie",
+    title: "Shape & Energy",
     discount: "-40%",
   },
-  // Tu peux ajouter autant de slides que tu veux
+  {
+    image: "/images/promo3.png",
+    title: "The Natural",
+    discount: "-40%",
+  },
+  {
+    image: "/images/promo1.jpg",
+    title: "Nature & Dietetics",
+    discount: "-58%",
+  },
+  // You can add as many slides as you want
 ];
 
 export default function PromoCarousel() {
@@ -21,7 +26,7 @@ export default function PromoCarousel() {
   useEffect(() => {
     const timer = setInterval(() => {
       setCurrent((prev) => (prev + 1) % slides.length);
-    }, 5000); // Change toutes les 5 secondes
+    }, 5000); // Changes every 5 seconds
     return () => clearInterval(timer);
   }, []);
 
@@ -38,8 +43,8 @@ export default function PromoCarousel() {
         >
           <div className="carousel-box">
             <h2>{slide.title}</h2>
-            <span className="discount">Jusqu'à <strong>{slide.discount}</strong></span>
-            <button>Je découvre</button>
+            <span className="discount">Up to <strong>{slide.discount}</strong></span>
+            <button>Discover</button>
           </div>
         </div>
       ))}

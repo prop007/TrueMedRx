@@ -1,106 +1,216 @@
 import React, { useRef } from "react";
 import { useNavigate } from "react-router-dom";
 import "./wevygoSection.css";
+
 import produit1 from './images/produit1.png';
 import produit2 from './images/produit2.png';
 import produit3 from './images/produit3.png';
-
+import produit4 from './images/produit4.png';
+import produit5 from './images/produit5.png';
+import produit10 from './images/produit10.png';
+import produit11 from './images/produit11.png';
+import produit12 from './images/produit12.png';
+import produit13 from './images/produit13.png';
+import produit14 from './images/produit14.png';
+import produit15 from './images/produit15.png';
+import produit16 from './images/produit16.png';
+import produit17 from './images/produit17.png';
+import produit18 from './images/produit18.png';
+//import produit19 from './images/produit19.png';
+import bannerImg from './images/product7.jpg'; // woman image (banner)
 
 
 const products = [
-  {
-    id: 2,
-    brand: "WEGOVY",
-    name: "WEGOVY 0,25 mg FlexTouch solution injectable, stylo prérempli",
-    price: 170,
+  { 
+    id: 2, 
+    brand: "WEGOVY 0.25mg", 
+    name: "WEGOVY 0.25 mg FlexTouch injectable solution", 
+    price: 160, 
     image: produit1,
+    description: "Wegovy 0.25mg is the starting dose for weight management treatment. It contains semaglutide, a GLP-1 receptor agonist that helps reduce appetite and increase feelings of fullness. This initial dose is typically used for the first 4 weeks to help your body adjust to the medication with minimal side effects.",
   },
-  {
-    id: 3,
-    brand: "MOUNJARO 5 mg",
-    name: "MOUNJARO 5 mg/dose kwikPen Inj.-Lsg. Fertigpen",
-    price: 210,
-    image: produit3,
-  },
-  {
-    id: 1,
-    brand: "OZEMPIC 1 mg",
-    name: "OZEMPIC 1 mg solution injectable en stylo prérempli pendant 8 semaines",
-    price: 171.1,
-    oldPrice: 290,
-    discount: "-42%",
+  { 
+    id: 1, 
+    brand: "WEGOVY 0.5mg", 
+    name: "WEGOVY 0.5 mg FlexTouch injectable solution", 
+    price: 160, 
     image: produit2,
+    description: "Wegovy 0.5mg is the second dosage step in weight management treatment. After 4 weeks on 0.25mg, patients increase to this dose. It continues to help control appetite through GLP-1 receptor activation, promoting weight loss while allowing the body to gradually adapt to higher semaglutide levels.",
   },
-
+  { 
+    id: 3, 
+    brand: "WEGOVY 1mg", 
+    name: "WEGOVY 1mg FlexTouch injectable solution", 
+    price: 160, 
+    image: produit3,
+    description: "Wegovy 1mg represents the third titration step in the weight loss protocol. Used after 4 weeks on 0.5mg, this dose provides increased semaglutide concentration for enhanced appetite suppression and metabolic effects. Many patients begin to see more significant weight loss results at this dosage level.",
+  },
+  { 
+    id: 4, 
+    brand: "WEGOVY 1.7mg", 
+    name: "WEGOVY 1.7 mg FlexTouch injectable solution", 
+    price: 160, 
+    image: produit4,
+    description: "Wegovy 1.7mg is the fourth dosage step, approaching the maintenance level. This intermediate dose helps bridge between lower starting doses and the full therapeutic dose, minimizing gastrointestinal side effects while providing substantial appetite control and weight management benefits.",
+  },
+  { 
+    id: 5, 
+    brand: "WEGOVY 2.4mg", 
+    name: "WEGOVY 2.4 mg FlexTouch injectable solution", 
+    price: 160, 
+    image: produit5,
+    description: "Wegovy 2.4mg is the full maintenance dose for chronic weight management. This is the target therapeutic dosage proven in clinical trials to provide maximum weight loss efficacy. Used once weekly, it helps sustain long-term weight reduction by regulating appetite centers in the brain and slowing gastric emptying.",
+  },
 ];
 
-const AntiAgeSection = () => {
+const products1 = [
+  { 
+    id: 6, 
+    brand: "MOUNJARO 2.5 mg", 
+    name: "MOUNJARO 2.5 mg FlexTouch pre-filled pen", 
+    price: 200, 
+    image: produit10,
+    description: "Mounjaro 2.5mg is the introductory dose containing tirzepatide, a novel dual GIP and GLP-1 receptor agonist. This starting dose helps initiate metabolic improvements with minimal side effects. It's designed for the first 4 weeks of treatment to prepare patients for dose escalation in both diabetes management and weight loss therapy.",
+  },
+  { 
+    id: 7, 
+    brand: "MOUNJARO 5 mg", 
+    name: "MOUNJARO 5 mg/dose kwikPen Inj.-Solution", 
+    price: 190, 
+    image: produit11,
+    description: "Mounjaro 5mg represents the first therapeutic dose level after the initial titration. This dose provides enhanced dual hormone receptor activation, offering improved blood sugar control and appetite suppression. Clinical studies show significant A1C reduction and weight loss beginning at this dosage level.",
+  },
+  { 
+    id: 8, 
+    brand: "MOUNJARO 7.5 mg", 
+    name: "Mounjaro 7.5 mg | pre-filled pen | Diabetes and obesity", 
+    price: 203, 
+    oldPrice: 350, 
+    discount: "-42%", 
+    image: produit12,
+    description: "Mounjaro 7.5mg offers intermediate therapeutic benefits with enhanced efficacy over lower doses. At this level, patients typically experience substantial improvements in glycemic control and accelerated weight reduction. The dual agonist action provides synergistic effects on insulin secretion, glucagon suppression, and satiety signaling.",
+  },
+  { 
+    id: 9, 
+    brand: "MOUNJARO 10 mg", 
+    name: "Mounjaro 10 mg pre-filled pen", 
+    price: 180, 
+    image: produit13,
+    description: "Mounjaro 10mg provides high-level dual receptor activation for patients requiring more intensive therapy. This dose delivers robust metabolic effects, including significant improvements in insulin sensitivity, reduced hepatic glucose production, and enhanced weight loss through central appetite regulation and delayed gastric emptying.",
+  },
+  { 
+    id: 10, 
+    brand: "MOUNJARO 12.5 mg", 
+    name: "Mounjaro 12.5 mg pre-filled pen", 
+    price: 190, 
+    image: produit14,
+    description: "Mounjaro 12.5mg approaches the maximum therapeutic dose with pronounced effects on both glycemic control and weight management. Patients at this dose level often achieve substantial A1C reductions and meaningful weight loss. The medication works through multiple pathways including enhanced insulin secretion, suppressed glucagon, and reduced food intake.",
+  },
+  { 
+    id: 11, 
+    brand: "MOUNJARO 15 mg", 
+    name: "Mounjaro 15 mg pre-filled pen", 
+    price: 190, 
+    image: produit15,
+    description: "Mounjaro 15mg is the highest available dose, providing maximum dual GIP/GLP-1 receptor agonism. This maintenance dose offers peak efficacy for both diabetes management and weight loss. Clinical trials demonstrate superior A1C reduction and weight loss compared to other GLP-1 therapies, with many patients achieving over 15% body weight reduction.",
+  },
+];
+
+const products2 = [
+  { 
+    id: 12, 
+    brand: "OZEMPIC 0.25 mg", 
+    name: "Ozempic 0.25 mg Pre-filled pen", 
+    price: 100, 
+    image: produit16,
+    description: "Ozempic 0.25mg is the starting dose for type 2 diabetes treatment with semaglutide. This initial dose helps minimize gastrointestinal side effects while introducing GLP-1 receptor activation. It's typically used for the first 4 weeks to improve glucose-dependent insulin secretion, suppress glucagon, and slow gastric emptying gradually.",
+  },
+  { 
+    id: 13, 
+    brand: "OZEMPIC 0.5 mg", 
+    name: "Ozempic 0.5 mg pre-filled pen", 
+    price: 90, 
+    image: produit17,
+    description: "Ozempic 0.5mg is the first maintenance dose for many patients with type 2 diabetes. After initial titration, this dose provides effective glycemic control through enhanced insulin secretion and glucagon suppression. It also offers cardiovascular benefits and moderate weight loss effects as demonstrated in clinical outcomes trials.",
+  },
+  { 
+    id: 14, 
+    brand: "OZEMPIC 1 mg", 
+    name: "Ozempic 1 mg pre-filled pen", 
+    price: 110, 
+    image: produit18,
+    description: "Ozempic 1mg is the higher maintenance dose for patients requiring more intensive glycemic control. This dose provides maximum semaglutide efficacy within Ozempic's approved range, offering superior A1C reduction, significant weight loss, and cardiovascular risk reduction. It's particularly effective for patients who don't achieve targets on the 0.5mg dose.",
+  },
+];
+
+
+// reusable component for a horizontal section
+const ProductSection = ({ title, products, showBanner }) => {
   const scrollRef = useRef(null);
   const navigate = useNavigate();
 
   const scrollLeft = () => {
-    scrollRef.current.scrollBy({ left: -300, behavior: "smooth" });
+    if (scrollRef.current) scrollRef.current.scrollBy({ left: -300, behavior: "smooth" });
   };
-
   const scrollRight = () => {
-    scrollRef.current.scrollBy({ left: 300, behavior: "smooth" });
+    if (scrollRef.current) scrollRef.current.scrollBy({ left: 300, behavior: "smooth" });
   };
 
   return (
-    <div className="antiage-container">
-      {/* Version desktop du banner */}
-      <div className="antiage-banner desktop-only">
-        <div className="banner-text">
-          <h2>perte de poids</h2>
-
-          <a href="#">Voir tout</a>
-        </div>
-        <img src="/images/product7.png" alt="Femme" />
-      </div>
-
-      {/* Version mobile du banner (intégré comme une carte scrollable) */}
-      <div
-        className="product-card banner-card mobile-only"
-        onClick={() => navigate('/produit')}
-        style={{ cursor: 'pointer' }}
-      >
-        <img src="/images/product7.png" alt="Femme" />
-        <p className="brand">perte de poids</p>
-  
-        <a href="#" className="view-all">Voir tout</a>
+    <section id="products-section" className="section-wrapper">
+      <div className="section-header">
+        <h2>{title}</h2>
+        <a href="#" className="see-all">View all</a>
       </div>
 
       <div className="carousel-wrapper">
-        <button className="arrow left" onClick={scrollLeft}>
-          &larr;
-        </button>
+        <button className="arrow left" onClick={scrollLeft} aria-label="Previous">‹</button>
 
         <div className="products-container" ref={scrollRef}>
-          {products.map((product, idx) => (
-            <div className="product-card" key={idx}>
+          {products.map((product) => (
+            <div className="product-card" key={product.id}>
               <img
                 src={product.image}
                 alt={product.name}
-                style={{ cursor: "pointer" }}
                 onClick={() => navigate('/produit', { state: { product } })}
+                style={{ cursor: "pointer" }}
               />
               <p className="brand">{product.brand}</p>
-              <p className="name">{product.name}</p>
               <div className="price-box">
                 {product.discount && <span className="discount">{product.discount}</span>}
-                {product.oldPrice && <span className="old-price">{product.oldPrice}</span>}
-                <span className="price">{product.price}€ </span>
+                {product.oldPrice && <span className="old-price">{product.oldPrice}€</span>}
+                <span className="price">{product.price}$</span>
               </div>
             </div>
           ))}
         </div>
 
-        <button className="arrow right" onClick={scrollRight}>
-          &rarr;
-        </button>
+        <button className="arrow right" onClick={scrollRight} aria-label="Next">›</button>
       </div>
+    </section>
+  );
+};
+
+
+const WevygoSection = () => {
+  return (
+    <div className="wevygo-page">
+      {/* mobile banner: displays on mobile above sections */}
+      <div className="mobile-banner mobile-only">
+        <div className="mobile-banner-card">
+          <img src={bannerImg} alt="Woman" />
+          <div className="mobile-banner-text">
+            <h3>Weight Loss</h3>
+            <p>Solutions &amp; Treatments</p>
+          </div>
+        </div>
+      </div>
+
+      <ProductSection title="Weight Loss with Wegovy" products={products} showBanner={true} />
+      <ProductSection title="Weight Loss with Mounjaro Products" products={products1} />
+      <ProductSection title="Weight Loss with Ozempic" products={products2} />
     </div>
   );
 };
 
-export default AntiAgeSection;
+export default WevygoSection;

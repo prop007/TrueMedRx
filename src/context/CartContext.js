@@ -21,6 +21,7 @@ const addToCart = (product) => {
 
 
 
+
   const removeFromCart = (productId) => {
     setCartItems(prevItems => prevItems.filter(item => item.id !== productId));
   };

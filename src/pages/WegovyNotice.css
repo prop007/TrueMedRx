@@ -3,6 +3,7 @@
   gap: 40px;
   padding: 40px;
   font-family: Arial, sans-serif;
+    background-color: rgba(87, 110, 129, 0.5); /* Blanc à 50% d'opacité */
 }
 
 .left-section {

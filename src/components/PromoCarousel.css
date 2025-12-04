@@ -3,7 +3,6 @@
   width: 100%;
   height: 400px;
   overflow: hidden;
-  border-radius: 10px;
 }
 
 .carousel-slide {
@@ -25,7 +24,7 @@
   position: absolute;
   top: 50%;
   left: 5%;
-  background: white;
+      background-color: rgba(184, 189, 188, 0.5); /* Blanc à 50% d'opacité */
   padding: 20px;
   border-radius: 15px;
   max-width: 350px;

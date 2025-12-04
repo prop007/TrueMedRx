@@ -11,37 +11,36 @@ const Panier = () => {
   );
 
   const handleWhatsAppCheckout = () => {
-  const message = cartItems
-    .map(item => `📦 *${item.name}* - Quantité: ${item.quantity}, Prix: ${item.price} €`)
-    .join('\n');
+    const message = cartItems
+      .map(item => `📦 *${item.name}* - Quantity: ${item.quantity}, Price: ${item.price} €`)
+      .join('\n');
 
-  const totalMessage = `\n💰 *Total*: ${total.toFixed(2)} €`;
+    const totalMessage = `\n💰 *Total*: ${total.toFixed(2)} €`;
 
-  const fullMessage = encodeURIComponent(`${message}${totalMessage}`);
+    const fullMessage = encodeURIComponent(`${message}${totalMessage}`);
 
-  const phoneNumber = '33753911221'; // Remplace par ton numéro WhatsApp
-  const whatsappURL = `https://wa.me/${phoneNumber}?text=${fullMessage}`;
+    const phoneNumber = '15752652226';
+    const whatsappURL = `https://wa.me/${phoneNumber}?text=${fullMessage}`;
 
-  window.open(whatsappURL, '_blank');
-};
-
+    window.open(whatsappURL, '_blank');
+  };
 
   return (
     <div className="panier-container">
-      <h2>Mon panier</h2>
+      <h2>My Cart</h2>
       {cartItems.length === 0 ? (
-        <p>Votre panier est vide.</p>
+        <p>Your cart is empty.</p>
       ) : (
         <>
           <table className="panier-table">
             <thead>
               <tr>
                 <th>Image</th>
-                <th>Produit</th>
-                <th>Prix</th>
-                <th>Quantité</th>
+                <th>Product</th>
+                <th>Price</th>
+                <th>Quantity</th>
                 <th>Total</th>
-                <th>Supprimer</th>
+                <th>Remove</th>
               </tr>
             </thead>
             <tbody>
@@ -61,12 +60,10 @@ const Panier = () => {
                       type="number"
                       min="1"
                       value={item.quantity}
-onChange={(e) => {
-  const value = Math.max(1, parseInt(e.target.value) || 1);
-  updateQuantity(item.id, value);
-}}
-
-
+                      onChange={(e) => {
+                        const value = Math.max(1, parseInt(e.target.value) || 1);
+                        updateQuantity(item.id, value);
+                      }}
                       className="quantity-input"
                     />
                   </td>
@@ -76,7 +73,7 @@ onChange={(e) => {
                       className="remove-btn"
                       onClick={() => removeFromCart(item.id)}
                     >
-                      supprimer
+                      Remove
                     </button>
                   </td>
                 </tr>
@@ -85,10 +82,10 @@ onChange={(e) => {
           </table>
 
           <div className="panier-total">
-            <h3>Total : {total.toFixed(2)} €</h3>
-<button className="checkout-btn" onClick={handleWhatsAppCheckout}>
-  Passer à la caisse via WhatsApp
-</button>
+            <h3>Total: {total.toFixed(2)} €</h3>
+            <button className="checkout-btn" onClick={handleWhatsAppCheckout}>
+              Checkout via WhatsApp
+            </button>
           </div>
         </>
       )}

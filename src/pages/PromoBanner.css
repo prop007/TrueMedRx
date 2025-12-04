@@ -4,6 +4,8 @@
   justify-content: center;
   gap: 20px;
   padding: 20px;
+      background-color: rgba(87, 110, 129, 0.5); /* Blanc à 50% d'opacité */
+
 }
 
 .promo-card {

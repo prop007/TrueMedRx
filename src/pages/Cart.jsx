@@ -6,9 +6,9 @@ const Cart = () => {
 
   return (
     <div className="cart-container">
-      <h2>Mon Panier</h2>
+      <h2>My Cart</h2>
       {cartItems.length === 0 ? (
-        <p>Votre panier est vide</p>
+        <p>Your cart is empty</p>
       ) : (
         <div className="cart-items">
           {cartItems.map(item => (
@@ -16,13 +16,13 @@ const Cart = () => {
               <img src={item.image} alt={item.name} />
               <div>
                 <h4>{item.name}</h4>
-                <p>Prix unitaire: {item.price}€</p>
+                <p>Unit price: {item.price}€</p>
                 <div>
                   <button onClick={() => updateQuantity(item.id, item.quantity - 1)}>-</button>
                   <span>{item.quantity}</span>
                   <button onClick={() => updateQuantity(item.id, item.quantity + 1)}>+</button>
                 </div>
-                <button onClick={() => removeFromCart(item.id)}>Supprimer</button>
+                <button onClick={() => removeFromCart(item.id)}>Remove</button>
               </div>
             </div>
           ))}

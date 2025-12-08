@@ -1,0 +1,35 @@
+{
+  "files": {
+    "main.css": "/prop007/TrueMedRx/static/css/main.5d561d2a.css",
+    "main.js": "/prop007/TrueMedRx/static/js/main.f27d54cb.js",
+    "static/js/453.09065fc4.chunk.js": "/prop007/TrueMedRx/static/js/453.09065fc4.chunk.js",
+    "static/media/image.png": "/prop007/TrueMedRx/static/media/image.0576753451f6abe394e4.png",
+    "static/media/produit10.png": "/prop007/TrueMedRx/static/media/produit10.76d9b20bc09ad768fee0.png",
+    "static/media/produit16.png": "/prop007/TrueMedRx/static/media/produit16.7bac31b75ce05a9a2c20.png",
+    "static/media/produit13.png": "/prop007/TrueMedRx/static/media/produit13.a70d2cef7f22dcd7bac1.png",
+    "static/media/produit17.png": "/prop007/TrueMedRx/static/media/produit17.d1538f761c70bb1be7bc.png",
+    "static/media/produit3.png": "/prop007/TrueMedRx/static/media/produit3.93ca6f91ae1f8683928f.png",
+    "static/media/produit5.png": "/prop007/TrueMedRx/static/media/produit5.811882defcda7dd3ed3e.png",
+    "static/media/produit15.png": "/prop007/TrueMedRx/static/media/produit15.48f48cbf24a3f7d40445.png",
+    "static/media/produit2.png": "/prop007/TrueMedRx/static/media/produit2.70cb6c9f26f02fe6ebe2.png",
+    "static/media/produit1.png": "/prop007/TrueMedRx/static/media/produit1.6404dce1ce1a5c1901ad.png",
+    "static/media/produit14.png": "/prop007/TrueMedRx/static/media/produit14.352f1f20dbd32be53987.png",
+    "static/media/produit18.png": "/prop007/TrueMedRx/static/media/produit18.d6dd0defa00ffe0f47d5.png",
+    "static/media/produit11.png": "/prop007/TrueMedRx/static/media/produit11.0252a100132b87445139.png",
+    "static/media/produit4.png": "/prop007/TrueMedRx/static/media/produit4.3e91f13f90077f7c7aa3.png",
+    "static/media/product7.jpg": "/prop007/TrueMedRx/static/media/product7.611a1f2a627b518e9bd8.jpg",
+    "static/media/produit12.png": "/prop007/TrueMedRx/static/media/produit12.a1e23c231acd03ba67d9.png",
+    "static/media/fa-solid-900.woff2": "/prop007/TrueMedRx/static/media/fa-solid-900.8ae0d37556ff1e685de2.woff2",
+    "static/media/fa-brands-400.woff2": "/prop007/TrueMedRx/static/media/fa-brands-400.1c5c7716b05754cb4eab.woff2",
+    "static/media/fa-regular-400.woff2": "/prop007/TrueMedRx/static/media/fa-regular-400.6f05ca9ab7b5345dbc07.woff2",
+    "static/media/fa-v4compatibility.woff2": "/prop007/TrueMedRx/static/media/fa-v4compatibility.e4340c52a50e727c6afa.woff2",
+    "index.html": "/prop007/TrueMedRx/index.html",
+    "main.5d561d2a.css.map": "/prop007/TrueMedRx/static/css/main.5d561d2a.css.map",
+    "main.f27d54cb.js.map": "/prop007/TrueMedRx/static/js/main.f27d54cb.js.map",
+    "453.09065fc4.chunk.js.map": "/prop007/TrueMedRx/static/js/453.09065fc4.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.5d561d2a.css",
+    "static/js/main.f27d54cb.js"
+  ]
+}

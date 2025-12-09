@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/TrueMedRx/static/css/main.b321d0df.css",
-    "main.js": "/TrueMedRx/static/js/main.46aa6f5d.js",
+    "main.js": "/TrueMedRx/static/js/main.b2f178e4.js",
     "static/js/453.09065fc4.chunk.js": "/TrueMedRx/static/js/453.09065fc4.chunk.js",
     "static/media/image.png": "/TrueMedRx/static/media/image.0576753451f6abe394e4.png",
     "static/media/produit10.png": "/TrueMedRx/static/media/produit10.76d9b20bc09ad768fee0.png",
@@ -25,11 +25,11 @@
     "static/media/fa-v4compatibility.woff2": "/TrueMedRx/static/media/fa-v4compatibility.e4340c52a50e727c6afa.woff2",
     "index.html": "/TrueMedRx/index.html",
     "main.b321d0df.css.map": "/TrueMedRx/static/css/main.b321d0df.css.map",
-    "main.46aa6f5d.js.map": "/TrueMedRx/static/js/main.46aa6f5d.js.map",
+    "main.b2f178e4.js.map": "/TrueMedRx/static/js/main.b2f178e4.js.map",
     "453.09065fc4.chunk.js.map": "/TrueMedRx/static/js/453.09065fc4.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.b321d0df.css",
-    "static/js/main.46aa6f5d.js"
+    "static/js/main.b2f178e4.js"
   ]
 }
